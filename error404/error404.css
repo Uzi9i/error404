@@ -1,0 +1,101 @@
+body{
+    
+    font-family:sans-serif;
+    margin:0px;
+
+}
+
+:root{
+    --var1:20px;
+    --var2:-20px;
+}
+
+.main-wrapper{
+    background: rgb(15, 4, 41);
+    background: radial-gradient(ellipse at center, rgb(79, 83, 117)0%,rgba(15, 4, 41)100%);
+    color:#ffff;
+    
+}
+.content-wrapper{
+    opacity:0.8;
+    font-size: 25px;
+    text-align: center;
+
+}
+.title{
+    opacity:0.8;
+    font-weight: 950;
+    font-size:70px;
+    margin:0px;
+}
+.subtitle{
+    opacity:0.8;
+    font-size:20px;
+    text-align: center;
+
+}
+.subtitle>span{
+    text-decoration: line-through;
+}
+
+.wrapper{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    position:relative;
+    min-height:100vh;
+    
+}
+.noise-wrapper{
+    background:transparent;
+    position:absolute;
+    overflow:hidden;
+    width:100%;
+    height:100vh;
+    
+    
+}
+.noise{
+    position: absolute;
+    opacity:0.2;
+    inset:-500px;
+    background:transparent url(tv-noise-seamless-texture-illustration-50420373.jpeg);
+    background-size: 150px 150px;
+    animation:noise 1s steps(1) infinite ;
+}
+
+@keyframes noise{
+    0%{
+        transform: translate(var(--var1));
+    }
+    10%{
+        transform: translate(var(--var2));
+    }
+    20%{
+        transform: translateY(var(--var1));
+    }
+    30%{
+        transform: translateY(var(--var2));
+    }
+    40%{
+        transform: translate(var(--var2));
+    }
+    50%{
+        transform: translate(var(--var1));
+    }
+    60%{
+        transform: translateY(var(--var2));
+    }
+    70%{
+        transform: translateY(var(--var1));
+    }
+    80%{
+        transform: translate(var(--var1));
+    }
+    90%{
+        transform: translate(var(--var2));
+    }
+    100%{
+        transform: translateY(var(--var2));
+    }
+}
